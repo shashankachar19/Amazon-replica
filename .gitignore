@@ -2,32 +2,48 @@
 node_modules/
 */node_modules/
 
-# Database
-*.sqlite
-*.sqlite3
-backend/database.sqlite
-
 # Environment variables
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Build outputs
-dist/
-build/
-*/dist/
-*/build/
+# Database
+*.sqlite
+*.db
+database.sqlite
 
 # Logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
 
-# OS specific
-.DS_Store
-Thumbs.db
-desktop.ini
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Build outputs
+build/
+dist/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
 
 # IDE
 .vscode/
@@ -36,6 +52,31 @@ desktop.ini
 *.swo
 *~
 
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
 # Temporary files
 *.tmp
 *.temp
+
+# API Keys and Secrets
+config/keys.js
+secrets/
+*.pem
+*.key
+*.p12
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Package files
+*.tgz
+*.tar.gz
